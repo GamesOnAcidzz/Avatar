@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://tb41401s1u3l"]
+
+[resource]
+resource_name = "RightEye"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.57461107, 0.27172583, 0.9063433, 1)
+roughness = 0.5

@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bk4wqwloguh2e"]
+
+[ext_resource type="PackedScene" uid="uid://c7w20k0wfru3t" path="res://avatar.tscn" id="1_1kc1q"]
+[ext_resource type="Script" uid="uid://bse1tw3tlwiqh" path="res://scenes/scene.gd" id="1_4msxo"]
+[ext_resource type="Material" uid="uid://tb41401s1u3l" path="res://materials/right_eyey.tres" id="2_4msxo"]
+[ext_resource type="ArrayMesh" uid="uid://p5wk8gqeedc8" path="res://outfits/pyramid_head_Cone_001.res" id="3_5fb3c"]
+[ext_resource type="ArrayMesh" uid="uid://cugesxxjhli2d" path="res://outfits/gentlemen_Cylinder.res" id="4_7182s"]
+[ext_resource type="ArrayMesh" uid="uid://3w44rscxl7lr" path="res://outfits/tin_foil_Cone.res" id="4_gjmho"]
+[ext_resource type="ArrayMesh" uid="uid://b8b57v8hgvwh5" path="res://outfits/gentlemen_Circle_001.res" id="5_tpwpp"]
+[ext_resource type="ArrayMesh" uid="uid://duioy0hfufx3l" path="res://outfits/gentlemen_Cube_001.res" id="6_7ftgl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7182s"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.06914853, 0.4986434, 0.64481246, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tpwpp"]
+material = SubResource("StandardMaterial3D_7182s")
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_4msxo"]
+
+[node name="Scene" type="Node3D" unique_id=54065847]
+script = ExtResource("1_4msxo")
+lerp_speed = 25.0
+
+[node name="Avatar" parent="." unique_id=287857827 instance=ExtResource("1_1kc1q")]
+
+[node name="Skeleton3D" parent="Avatar/acidzz/Arm" parent_id_path=PackedInt32Array(287857827, 899453764) index="0" unique_id=221518130]
+bones/1/position = Vector3(0, 2.7014751, 0)
+bones/6/rotation = Quaternion(0.73969704, -2.9355817e-08, -3.2392514e-08, 0.6729401)
+bones/7/rotation = Quaternion(0.72835046, -2.9896746e-08, -3.1891723e-08, 0.6852049)
+
+[node name="BoneAttachment3D" parent="Avatar/acidzz/Arm/Skeleton3D" index="1" unique_id=734082926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0012967587, 0)
+
+[node name="Mouth1" parent="Avatar/acidzz/Arm/Skeleton3D/BoneAttachment3D/Mouths" parent_id_path=PackedInt32Array(287857827, 66323996) index="0" unique_id=540508427]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
+[node name="Mouth2" parent="Avatar/acidzz/Arm/Skeleton3D/BoneAttachment3D/Mouths" parent_id_path=PackedInt32Array(287857827, 66323996) index="1" unique_id=1404392335]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
+[node name="Mouth3" parent="Avatar/acidzz/Arm/Skeleton3D/BoneAttachment3D/Mouths" parent_id_path=PackedInt32Array(287857827, 66323996) index="2" unique_id=1464050816]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
+[node name="Mouth4" parent="Avatar/acidzz/Arm/Skeleton3D/BoneAttachment3D/Mouths" parent_id_path=PackedInt32Array(287857827, 66323996) index="3" unique_id=872970899]
+surface_material_override/0 = null
+surface_material_override/1 = null
+
+[node name="OutfitAttachment" type="BoneAttachment3D" parent="Avatar/acidzz/Arm/Skeleton3D" index="2" unique_id=647014845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0012967587, 0)
+bone_name = "Body"
+bone_idx = 1
+
+[node name="Costumes" type="Node3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment" unique_id=772753103]
+
+[node name="PyramidHead" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=1548498434]
+transform = Transform3D(2.0696254, 0, 0, 0, 2.0208793, -0.44653815, 0, 0.44653815, 2.0208793, 0, 1.6901126, -0.46883965)
+visible = false
+mesh = ExtResource("3_5fb3c")
+
+[node name="Gentlemen" type="Node3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=831772177]
+
+[node name="TopHat" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes/Gentlemen" unique_id=888675352]
+transform = Transform3D(1, 0, 0, 0, 0.99202037, -0.12607777, 0, 0.12607777, 0.99202037, 0, 1.548811, 0.009685443)
+mesh = ExtResource("4_7182s")
+
+[node name="Monacle" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes/Gentlemen" unique_id=554894559]
+transform = Transform3D(0.563, 0, 0, 0, -2.4609513e-08, -0.563, 0, 0.563, -2.4609513e-08, -0.7096157, 0.5994353, 1.1717402)
+mesh = ExtResource("5_tpwpp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes/Gentlemen/Monacle" unique_id=276707877]
+transform = Transform3D(1.509, 0, 0, 0, 0.184, 0, 0, 0, 1.509, 0, -0.23072292, 0)
+mesh = SubResource("CylinderMesh_tpwpp")
+
+[node name="Moustache" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes/Gentlemen" unique_id=597258349]
+transform = Transform3D(1.155, 0, 0, 0, 1.155, 0, 0, 0, 0.211, 0, 0.011027634, 0.66458154)
+mesh = ExtResource("6_7ftgl")
+
+[node name="TinFoil" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=817911781]
+transform = Transform3D(0.6407293, 0, 0, 0, 0.63031983, -0.1150259, 0, 0.1150259, 0.63031983, 0, 1.4470589, -0.016582012)
+visible = false
+mesh = ExtResource("4_gjmho")
+
+[node name="Node3D" type="Node3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=1425473444]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=35026504]
+transform = Transform3D(1, 0, 0, 0, 0.9965148, 0.08341698, 0, -0.08341698, 0.9965148, 0, 1.5969712, 6.1275597)
+fov = 65.3
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=43550108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, -4)
+material_override = ExtResource("2_4msxo")
+size = Vector3(20, 19, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1820131596]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -9.5, 1, 4)
+material_override = ExtResource("2_4msxo")
+size = Vector3(20, 19, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1102145385]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.5, 1, 4)
+material_override = ExtResource("2_4msxo")
+size = Vector3(20, 19, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1277570148]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5, -4, 4)
+material_override = ExtResource("2_4msxo")
+size = Vector3(20, 19, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1258540005]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.5, 11, 4)
+size = Vector3(20, 19, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1133505205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5402024, 2.2986178, 4.3619485)
+light_color = Color(0.3081143, 0.11989633, 0.53028274, 1)
+omni_range = 9.03
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=23226985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9454522, 2.2986178, 4.3619485)
+omni_range = 9.03
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1087345318]
+stream = SubResource("AudioStreamMicrophone_4msxo")
+autoplay = true
+bus = &"Record"
+
+[editable path="Avatar"]
