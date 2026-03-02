@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://clq1h0d7xytqn"
-path="res://.godot/imported/acidzz2.blend-210277d09a4f1347003301cb18490250.scn"
+valid=false
 
 [deps]
 
 source_file="res://acidzz2.blend"
-dest_files=["res://.godot/imported/acidzz2.blend-210277d09a4f1347003301cb18490250.scn"]
 
 [params]
 

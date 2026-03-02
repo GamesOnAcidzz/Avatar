@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b7cb30vhy5vhs"
-path="res://.godot/imported/pyramid_head.blend-c465368be954490f7c558d5968bf3e3e.scn"
+valid=false
 
 [deps]
 
 source_file="res://outfits/pyramid_head.blend"
-dest_files=["res://.godot/imported/pyramid_head.blend-c465368be954490f7c558d5968bf3e3e.scn"]
 
 [params]
 

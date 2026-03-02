@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b0w3s0pbue74s"
-path="res://.godot/imported/gentlemen.blend-00e69b4ae94a0cc4c9e52578b6989140.scn"
+valid=false
 
 [deps]
 
 source_file="res://outfits/gentlemen.blend"
-dest_files=["res://.godot/imported/gentlemen.blend-00e69b4ae94a0cc4c9e52578b6989140.scn"]
 
 [params]
 

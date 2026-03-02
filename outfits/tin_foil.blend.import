@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bb552bvgxjyle"
-path="res://.godot/imported/tin_foil.blend-c14134fcce115e21479f35a43d124ea0.scn"
+valid=false
 
 [deps]
 
 source_file="res://outfits/tin_foil.blend"
-dest_files=["res://.godot/imported/tin_foil.blend-c14134fcce115e21479f35a43d124ea0.scn"]
 
 [params]
 
