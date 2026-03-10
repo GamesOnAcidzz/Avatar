@@ -10,6 +10,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b8b57v8hgvwh5" path="res://outfits/gentlemen_Circle_001.res" id="5_tpwpp"]
 [ext_resource type="ArrayMesh" uid="uid://duioy0hfufx3l" path="res://outfits/gentlemen_Cube_001.res" id="6_7ftgl"]
 [ext_resource type="Material" uid="uid://c3qq2v5wvpeol" path="res://materials/background.tres" id="8_7182s"]
+[ext_resource type="PackedScene" uid="uid://df8ctpt7sfcmh" path="res://outfits/thief_helmet.fbx" id="10_dqloj"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_l20bo"]
 _surfaces = [{
@@ -260,12 +261,12 @@ lerp_speed = 25.0
 [node name="Avatar" parent="." unique_id=287857827 instance=ExtResource("1_1kc1q")]
 
 [node name="Skeleton3D" parent="Avatar/acidzz/Arm" parent_id_path=PackedInt32Array(287857827, 899453764) index="0" unique_id=221518130]
-bones/1/position = Vector3(0, 2.7020485, 0)
-bones/6/rotation = Quaternion(0.7394116, -3.3212032e-08, -2.8537526e-08, 0.6732538)
-bones/7/rotation = Quaternion(0.7280833, -3.3439935e-08, -2.8349257e-08, 0.68548864)
+bones/1/position = Vector3(0, 2.7028003, 0)
+bones/6/rotation = Quaternion(0.7390368, -2.9326868e-08, -3.2424285e-08, 0.67366505)
+bones/7/rotation = Quaternion(0.72773284, -2.9869703e-08, -3.1920436e-08, 0.6858608)
 
 [node name="BoneAttachment3D" parent="Avatar/acidzz/Arm/Skeleton3D" index="1" unique_id=734082926]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0018701553, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.002621889, 0)
 
 [node name="Mouth1" parent="Avatar/acidzz/Arm/Skeleton3D/BoneAttachment3D/Mouths" parent_id_path=PackedInt32Array(287857827, 66323996) index="0" unique_id=540508427]
 mesh = SubResource("ArrayMesh_5yiy0")
@@ -289,7 +290,7 @@ surface_material_override/0 = null
 surface_material_override/1 = null
 
 [node name="OutfitAttachment" type="BoneAttachment3D" parent="Avatar/acidzz/Arm/Skeleton3D" index="2" unique_id=647014845]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0018701553, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.002621889, 0)
 bone_name = "Body"
 bone_idx = 1
 
@@ -297,6 +298,7 @@ bone_idx = 1
 
 [node name="PyramidHead" type="MeshInstance3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=1548498434]
 transform = Transform3D(2.069625, 0, 0, 0, 1.9533027, -0.68407476, 0, 0.68407476, 1.9533027, 0, 1.5326405, -0.19968605)
+visible = false
 mesh = ExtResource("3_5fb3c")
 
 [node name="Gentlemen" type="Node3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=831772177]
@@ -322,6 +324,9 @@ mesh = ExtResource("6_7ftgl")
 transform = Transform3D(0.6407293, 0, 0, 0, 0.63031983, -0.1150259, 0, 0.1150259, 0.63031983, 0, 1.4470589, -0.016582012)
 visible = false
 mesh = ExtResource("4_gjmho")
+
+[node name="thief_helmet" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=2005179970 instance=ExtResource("10_dqloj")]
+transform = Transform3D(0.61245114, 0, 0, 0, 0.067520395, -0.5657981, 0, 0.4893529, 0.07806828, 0, 1.5426247, 0.8562058)
 
 [node name="Node3D" type="Node3D" parent="Avatar/acidzz/Arm/Skeleton3D/OutfitAttachment/Costumes" unique_id=1425473444]
 
